@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* set most used vars */
+    :root{
+      --font-color1:hsl(228, 12%, 48%);
+      --font-color2:hsl(158, 36%, 37%);
+      --font-size:14px;
+    }
+    /* page styles */
+    html{
+      height: 100%;
+    }
+    body{
+      height:100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      background-color:  hsl(30, 38%, 92%);
+    }
+    /* product and continer styles */
+    .con{
+      width: 50%;
+      margin: 21px;
+      height: 100%;
+    }
+    .product{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      background-color:  hsl(0, 0%, 100%);
+      border-radius: 12px;
+      width: 525px;
+      height: 58%;
+  }
+  /* txt section in card style */
+    .card{
+      display: flex;
+      width: 88%;
+      height: 100%;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+  }
+  /* img styles */
+    .imgcon {
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+      width: 50%;
+      height: 100%;
+      background-image: url(images/image-product-desktop.jpg) ;
+      background-size: cover;
+  }
+  /* sections font styles */
+    .font0{
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color:  var(--main-color);
+      margin-top: 20px;
+      font-size: var(--font-size);
+    }
+    .font1{
+      font-family: 'Fraunces', serif;
+      font-weight: bolder;
+      font-size: 25px;
+      color: hsl(212, 21%, 14%);
+    }
+    .font2{
+      font-family: 'Montserrat', sans-serif;
+      color:  var(--font-color1);
+      font-size: var(--font-size);
+    }
+    .font3{
+      font-family: 'Fraunces', serif;
+      font-size: 25px;
+      color: var(--font-color2);
+      font-weight: bolder;
+      display: flex;
+      justify-content: space-around;
+    }
+    .sp{
+      font-size: small;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--font-color1);
+      text-decoration: line-through;
+      font-weight: 100;
+    }
+    /* button style */
+    button{
+      font-family: 'Montserrat', sans-serif;
+      font-size: var(--font-size);
+      margin-bottom: 6px;
+      border: none;
+      background-color: var(--font-color2);
+      color:  hsl(0, 0%, 100%);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    /* styles for mobile devices */
+    @media only screen and (max-width:450px){ 
+      .con{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card{
+        display: flex;
+        width: 87%;
+        height: 100%;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: flex-start;
+      }
+      .product{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 12px;
+        width: 100%;
+        height: 77%;
+      }
+    .imgcon {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        width: 100%;
+        height: 50%;
+        background-image: url(images/image-product-mobile.jpg);
+    }
+    }
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class="product">
+        <div class="con">
+          <div class="card">
+            <div class="font0">Perfume</div> 
+          
+            <div class="font1">Gabrielle Essence Eau De Parfum</div> 
+          
+            <div class="font2">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</div> 
+          
+            <div class="font3">$149.99 <span class="sp">$169.99</span>  </div>
+          
+            <button><svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg> Add to Cart</button>
+          </div>
+        </div>
+        <div class="imgcon"></div>
+      </div>
+    </body>
+    </html>
